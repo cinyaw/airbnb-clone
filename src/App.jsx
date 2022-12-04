@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import Home from './Home';
 import Header from './Header';
 import Footer from './Footer';
@@ -10,7 +10,10 @@ function App() {
     <div className='app'>
       <Router>
         <Header />
-        <Home />
+        <Routes>
+          <Route path='/search' element={<SearchPage/>} />
+          <Route path='/' element={<Home/>} />
+        </Routes>
         <Footer />
       </Router>
     </div>
