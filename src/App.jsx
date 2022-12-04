@@ -7,16 +7,13 @@ import SearchPage from './SearchPage';
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/search" element={<SearchPage />} />
-      </Routes>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <div className='app'>
+      <Router>
+        <Header />
+        <Home />
+        <Footer />
+      </Router>
+    </div>
   );
 }
 
